@@ -20,13 +20,15 @@ You really have several options…
 
 KickrBikeInterceptor has an “Open Gears Window” button where it will open a "always on top" window that you can place on top of zwift and you don’t need Sauce4Zwift. Or you can use the more elegant solution of sauce for zwift with [KickrBikeGearsS4ZMod](https://github.com/pwfulghum/KickrBikeGearsS4ZMod). I highly recommend sauce for zwift.
 
-If you have kickr bike **WITHOUT** dircon, You **MUST** use KickrBikeInterceptor and have zwift connect to the “INTR KICKR bike” on the device connection screens. In this scenario, zwift is talking dircon to interceptor and interceptor is talking bluetooth to the bike. **You must start interceptor before zwift starts.**
+**If you have kickr bike WITHOUT** DIRCON, You **MUST** use KickrBikeInterceptor and have zwift connect to the “INTR KICKR bike” on the device connection screens. In this scenario, zwift is talking dircon to interceptor and interceptor is talking bluetooth to the bike. **You must start interceptor before zwift starts.**
 
-If you have a kickr bike **WITH** dircon, you still need to run KickrBikeInterceptor, but zwift can connect to either bike dircon, or to interceptor dircon.
+**If you have a kickr bike WITH** DIRCON, you still need to run KickrBikeInterceptor to get the gears over bluetooth, but Zwift can connect to either the bike dircon, or to interceptor dircon.  But the best thing to do is disable KickrBikeInterceptor's dircon with the following change in the appsettings.json file.
 
-If you decide not to use the Sauce4Zwift integration, I would change the appsettings.json file (towards the bottom).
+        “Dircon”: { “enabled”: “false” }
 
-“Sauce”: { “url”: “” } (it will make sense when you see it.)
+If you decide not to use the Sauce4Zwift integration, you can disalbe it by chaning the the appsettings.json file (towards the bottom).
+
+        “Sauce”: { “enabled”: “false” } 
 
 P.S . v1.0.0 of my mod had a typo that has been fixed in **v1.0.1** of the [KickrBikeGearsS4ZMod](https://github.com/pwfulghum/KickrBikeGearsS4ZMod)
 
